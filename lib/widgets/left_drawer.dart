@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:grosa/screens/list_productentry.dart';
 import 'package:grosa/screens/menu.dart';
 import 'package:grosa/screens/productentry_form.dart';
 
@@ -59,6 +60,17 @@ class LeftDrawer extends StatelessWidget {
                   MaterialPageRoute(
                     builder: (context) => const ProductEntryFormPage(),
                   ));
+            },
+          ),
+          ListTile(
+            leading: const Icon(Icons.add_reaction_rounded),
+            title: const Text('Daftar Produk'),
+            onTap: () {
+                // Route menu ke halaman mood
+                Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => const ProductEntryPage()),
+                );
             },
           ),
         ],
